@@ -1,0 +1,25 @@
+<?xml version="1.0"?> 
+<odoo> 
+  <record id="view_form_todo_task" model="ir.ui.view"> 
+    <field name="name">To-do Task Form</field> 
+    <field name="model">todo.task</field> 
+    <field name="arch" type="xml"> 
+      <form string="To-do Task"> 
+	<header>
+		 <button name="do_clear_done" type="object"
+			string="Clear Done" />
+	</header>
+	<sheet>
+          <group>
+            <field name="name"/> 
+            <field name="user_id"/> 
+            <field name="is_done"/> 
+            <field name="active" readonly="1"/> 
+            <field name="team_ids"/> 
+            <field name="date_deadline"/>
+          </group> 
+	</sheet>
+     </form> 
+    </field> 
+  </record> 
+</odoo> 
